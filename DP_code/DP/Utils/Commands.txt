@@ -1,0 +1,10 @@
+# DATA CAPTURE
+activate gnuradioenv
+cd "C:\Git\Personal\DP"
+python "src/app/read_time.py" 6 >> Data/val01/time_sync.txt
+echo %date% %time%
+iridium-extractor -D 4 "C:\Git\Personal\DP\src\config\plutosdr-soapy.conf" >> Data/val01/output.bits
+
+# DATA DECODE
+python External/iridium-toolkit/iridium-parser.py -p Data/exp04/output.bits --harder >> Data/exp04/decoded.txt
+

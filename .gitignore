@@ -1,0 +1,25 @@
+# Virtual environments
+venv/
+venv_new/
+.venv/
+__pycache__/
+
+# macOS
+.DS_Store
+
+# Large data files
+*.bits
+*.pickle
+*.parsed
+Data/
+
+# IDE
+.idea/
+.vscode/
+
+# Python
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
